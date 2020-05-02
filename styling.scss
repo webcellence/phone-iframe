@@ -1,0 +1,51 @@
+// Default config
+
+$default-width-px: 600px;
+
+// Phone specific configuration
+
+$margin-top-for-frame: 164px;
+$margin-left-for-frame: 36px;
+
+$content-width: 1054px;
+$content-height: 1772px;
+
+// User config
+
+$phone-frame-url: "iphone-x-light.png";
+
+$phone-width-px: 300px;
+
+// Calculated variables
+
+$frame-scale: $phone-width-px/$default-width-px;
+
+// Actual CSS
+
+.phone-wrapper {
+  width: 100% !important;
+}
+.phone-iframe {
+  margin-left: $margin-left-for-frame * $frame-scale;
+  margin-top: $margin-top-for-frame * $frame-scale;
+  width: $content-width * $frame-scale;
+  height: $content-height * $frame-scale;
+  border: 0px;
+
+  -ms-zoom: $frame-scale;
+  -moz-transform: scale($frame-scale);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale($frame-scale);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale($frame-scale);
+  -webkit-transform-origin: 0 0;
+}
+
+.phone-outline {
+  position: absolute;
+  width: $phone-width-px;
+  height: auto;
+  background-size: 100% 100%;
+  background-repeat: no-repeat-y;
+  background-image: url($phone-frame-url);
+}

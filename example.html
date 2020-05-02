@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Phone iFrame demo</title>
+    <style>
+      .phone-iframe {
+        margin-left: 18px;
+        margin-top: 82px;
+        width: 527px;
+        height: 886px;
+        border: 0px;
+        -ms-zoom: 0.5;
+        -moz-transform: scale(0.5);
+        -moz-transform-origin: 0 0;
+        -o-transform: scale(0.5);
+        -o-transform-origin: 0 0;
+        -webkit-transform: scale(0.5);
+        -webkit-transform-origin: 0 0;
+      }
+
+      .phone-outline {
+        position: absolute;
+        width: 300px;
+        height: 600px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat-y;
+        background-image: url("iphone-x-light.png");
+      }
+
+      .page-wrapper {
+        position: relative;
+      }
+
+      .phone-wrapper {
+        width: 300px;
+        height: 600px;
+
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+
+        margin: 100px 0 0 -150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div class="phone-wrapper">
+        <div class="phone-outline"></div>
+        <iframe class="phone-iframe" src="https://wielewaalbandb.nl/"></iframe>
+      </div>
+    </div>
+  </body>
+</html>
